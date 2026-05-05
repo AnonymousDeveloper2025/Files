@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #001f3f 0%, #000d1f 100%);
+            color: white;
+            padding: 15px 10px;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: gray;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #002b5c, #001f45);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(0, 191, 255, 0.2);
+            transition: all 0.3s ease;
+            height: 90px; /* Cards mais pequenas */
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 191, 255, 0.25);
+        }
+
+        .logo {
+            width: 52px;
+            height: 52px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+            border: 2px solid rgba(255,255,255,0.15);
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .operator {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+            letter-spacing: 1px;
+        }
+
+        .status {
+            font-size: 0.7rem;
+            color: #a0d8ff;
+        }
+
+        .add-btn {
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            font-size: 26px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 191, 255, 0.4);
+            transition: background-color 0.2s ease;
+        }
+
+        .add-btn:hover {
+            background-color: #0099cc;
+        }
+
+        .success-message {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00cc66;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0, 204, 102, 0.5);
+            display: none;
+            z-index: 1000;
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Configurações </h1>
+
+    <!-- Unitel 1 -->
+    <div class="card">
+        <img src="unitel.jpg" alt="Unitel" class="logo">
+        <div class="info">
+            <div class="operator">Unitel-1</div>
+            <div class="status">SSL Proxy      |  Teste</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <!-- Unitel 2 -->
+    <div class="card">
+        <img src="unitel.jpg" alt="Unitel" class="logo">
+        <div class="info">
+            <div class="operator">Unitel-2</div>
+            <div class="status">SSL  | Tá fast</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <!-- Unitel 2 (segunda ocorrência) -->
+    <div class="card">
+        <img src="unitel.jpg" alt="Unitel" class="logo">
+        <div class="info">
+            <div class="operator">Unitel-3</div>
+            <div class="status">Unitel funcionando normalmente o que é o que é</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <!-- Africell 1 -->
+    <div class="card">
+        <img src="africell.jpg" alt="Africell" class="logo">
+        <div class="info">
+            <div class="operator">Africell-1</div>
+            <div class="status">Social Mídia | UDP</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <!-- Africell 2 -->
+    <div class="card">
+        <img src="africell.jpg" alt="Africell" class="logo">
+        <div class="info">
+            <div class="operator">Africell-2</div>
+            <div class="status">SSL/TLS       |   Testing speed 👌</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <div id="successMessage" class="success-message">
+        ✅ Import Successfully
+    </div>
+
+    <!-- Default -->
+    <div class="card">
+        <img src="d.jpg" alt="Default" class="logo">
+        <div class="info">
+            <div class="operator">Default</div>
+            <div class="status">Social Bundle</div>
+        </div>
+        <button class="add-btn" onclick="showSuccess()">✚</button>
+    </div>
+
+    <div id="successMessage" class="success-message">
+        ✅ Import Successfully
+    </div>
+    <script>
+        function showSuccess() {
+            const message = document.getElementById('successMessage');
+            message.style.display = 'block';
+            
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+  <div class="card">
+        <img src="" alt="AD" class="logo">
+        <div class="info">
+            <div class="operator">AD BANNER</div>
+        </div>
+    </div>
+
+</body>
+</html>
