@@ -1,0 +1,16 @@
+New Config{
+ssh_host:"77.68.12.207"
+ssh_port:"22"
+ssh_user:"Bolado2026-vpnjantit.com"
+ssh_pass:"Oboss"
+ssh_ns:"ns-uk.vpnjz.com"
+ssh_public_key:"cabfbd73e6eb8a92a87a9e8a7212af15840c0cd20688166363958f0135ca2153"
+}
+New Config{
+ssh_host:"77.68.12.207"
+ssh_port:"22"
+ssh_user:"Bolado2026-vpnjantit.com"
+ssh_pass:"Oboss"
+ssh_ns:"ns-uk.vpnjz.com"
+ssh_public_key:"cabfbd73e6eb8a92a87a9e8a7212af15840c0cd20688166363958f0135ca2153"
+}
