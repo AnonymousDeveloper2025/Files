@@ -1,0 +1,16 @@
+name: Keep Render Alive
+
+on:
+  schedule:
+    # Roda a cada 10 minutos
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # permite rodar manualmente também
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Backend
+        run: |
+          curl -s -o /dev/null -w "%{http_code}" https://eureka-labs-backend.onrender.com/keep-alive.php
+          echo " - Pinged at $(date)"
